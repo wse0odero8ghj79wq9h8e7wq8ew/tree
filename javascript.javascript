@@ -7,9 +7,9 @@ if (doesExists == null) {
 }
 let initial = localStorage.getItem("infinite-craft-data");
 let array = JSON.parse(initial).elements
-let text = prompt("What is the name of the item?");
-let emoji = prompt("What should the emoji be for the item? Hint: Press Windows + . ");
-let discovered = confirm("Should the item be a first discovery?");
+let text = prompt("Item name.");
+let emoji = prompt("Emoji Press Windows + . ");
+let discovered = confirm("FD?");
 let ItemsToAdd = {
   text: text,
   emoji: emoji,
@@ -21,7 +21,7 @@ let newItem = {
 };
 
 array = JSON.stringify(newItem)
-confirmed = confirm("Are you sure? This CANNOT be easily undone!");
+confirmed = confirm("Are you sure?");
 if (confirmed == true) {
 	localStorage.setItem("infinite-craft-data", array);
 	alert("Reloading!")
